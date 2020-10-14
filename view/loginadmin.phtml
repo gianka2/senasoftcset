@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<!--Bloque Head-->
+<?php
+require_once("recursos/head.phtml");
+?>
+<!--Fin Bloque Head-->
+<body>
+    <!--Bloque Header-->
+    
+    <?php 
+    include("recursos/header.phtml");
+    ?>
+
+
+    <!--Fin Bloque Header--> 
+    <div class="j-menu-container"></div>
+
+    <!-- ---- Columna izquierda ----------------------- -->
+    <div class="l-main-container">
+
+        <div class="container b-container-login-page">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="b-log-in-form">
+                        <div class="f-primary-l f-title-big c-secondary">Por favor inicia sesion</div>
+                        <p>Logueate con tu identificador y contraseña suministrados</p>
+                        <hr class="b-hr" />
+
+                        <!-- - - -  Formulario  - - - - -->
+                        <form method="POST" action="<?php echo Conectar::ruta();?>c-login/">
+                            <div class="b-form-row b-form-inline b-form-horizontal">
+                                <div class="col-xs-12">
+
+                                    <!-- ---- documento ---- -->
+                                    <div class="b-form-row">
+                                        <label class="b-form-horizontal__label" for="create_account_email">Tu Identificador</label>
+                                        <div class="b-form-horizontal__input">
+                                            <input type="text" id="create_account_email" class="form-control"    name="documento" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- ---- contraseña ---- -->
+                                    <div class="b-form-row">
+                                        <label class="b-form-horizontal__label" for="create_account_password">Tu Contraseña</label>
+                                        <div class="b-form-horizontal__input">
+                                            <input type="password" id="create_account_password" class="form-control"   name="clave" required>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- ---- btn iniciar sesion ---- -->
+                                    <div class="b-form-row">
+                                        <div class="b-form-horizontal__label"></div>
+                                        <div class="b-form-horizontal__input">
+                                            <input type="submit" class="b-btn f-btn b-btn-md b-btn-default f-primary-b b-btn__w100"  value="Iniciar sesion ahora" name="login">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+
+                <!-- - - - -  Inicio segunda columna - - - -->
+            </div>
+        </div>
+    </div>
+    <!-- - - - -  fin segunda columna - - - -->
+
+
+    <!-- - - -  Inicio del Footer - - - - -->
+    <?php 
+    require_once("recursos/footer.phtml");
+    ?>
+    <!-- - - ------- fin--------- - - - - -->
+
+
+
+
+    <!-- - - -  scripts - - - - -->
+    <?php include("recursos/scripts.phtml");?>
+
+    <!-- - - -  fin - - - - -->
+
+</body>
+</html>
