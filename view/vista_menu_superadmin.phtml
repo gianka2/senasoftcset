@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<!--Bloque Head-->
+<?php
+require_once("recursos/head.phtml");
+?>
+<!--Fin Bloque Head-->
+<body>
+	<!--Bloque Header-->
+
+	<?php 
+	include("recursos/header.phtml");
+	?>
+
+
+	<!--Fin Bloque Header--> 
+	<div class="j-menu-container"></div>
+
+	<!-- ---- inicio body ----------------------- -->
+
+	<div id="regContainer" class="container">
+		<div class="row">
+			<div class="col-md-4"></div>   
+			<div class="col-md-2"><a class="form-control btn btn-login2" ><img src="<?php echo Conectar::ruta();?>img/logo-vertical-cyan.jpg"><br>Usuarios</a></div>
+			<div class="col-md-2"><a class="form-control btn btn-login2" ><img src="<?php echo Conectar::ruta();?>img/logo-vertical-cyan.jpg"><br>roles</a></div>         
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+
+	<!-- - - - -  fin body columna - - - -->
+
+
+	<!-- - - -  Inicio del Footer - - - - -->
+	<?php 
+	require_once("recursos/footer.phtml");
+	?>
+	<!-- - - ------- fin--------- - - - - -->
+
+
+
+
+	<!-- - - -  scripts - - - - -->
+	<?php include("recursos/scripts.phtml");?>
+
+	<!-- - - -  fin - - - - -->
+
+</body>
+</html>
+
