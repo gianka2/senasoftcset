@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<!--Bloque Head-->
+<?php
+require_once("recursos/head.phtml");
+?>
+<!--Fin Bloque Head-->
+<body style="text-align: center;">
+	<!--Bloque Header-->
+
+	<?php 
+	include("recursos/header.phtml");
+	?>
+
+
+	<!--Fin Bloque Header--> 
+	<div class="j-menu-container"></div>
+
+	<!-- ---- inicio body ----------------------- -->
+	<br>
+	<div id="regContainer" class="container">
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel panel-heading">
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-md-6">
+							<h1>Administrador Bodega</h1>
+						</div>
+						<div class="col-md-3"></div>
+					</div>
+					
+				</div>
+				<div class="panel panel-body">
+					<div class="col-md-1"></div>   
+					<div class="col-md-2"><a href=""><img src="<?php echo Conectar::ruta();?>img/transaccion.png"><br><h3>Gestionar transacciones</h3></a></div>
+					<div class="col-md-2"><a href=""><img src="<?php echo Conectar::ruta();?>img/inventario.png"><br><h3>Gestionar inventario sucursales</h3></a></div>
+					<div class="col-md-2"><a href=""><img src="<?php echo Conectar::ruta();?>img/inventario.png"><br><h3>Gestionar inventario inicial</h3></a></div>
+					<div class="col-md-2"><a href=""><img src="<?php echo Conectar::ruta();?>img/entregas.png"><br><h3>Gestionar entregas</h3></a></div>
+					<div class="col-md-2"><a href=""><img src="<?php echo Conectar::ruta();?>img/productos.png"><br><h3>Consultar productos</h3></a></div>        
+					<div class="col-md-1"></div>
+				</div>
+			</div> 
+		</div>
+		<a href="" class="btn btn-danger btn-lg">Salir</a> 
+	</div>
+
+	<br>
+	<!-- - - - -  fin body columna - - - -->
+
+
+	<!-- - - -  Inicio del Footer - - - - -->
+	<?php 
+	require_once("recursos/footer.phtml");
+	?>
+	<!-- - - ------- fin--------- - - - - -->
+
+
+
+
+	<!-- - - -  scripts - - - - -->
+	<?php include("recursos/scripts.phtml");?>
+
+	<!-- - - -  fin - - - - -->
+
+</body>
+</html>
