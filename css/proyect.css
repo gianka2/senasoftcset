@@ -1,0 +1,54 @@
+.proyecto{
+	float: center;
+	width: 95.5%;
+	margin: 30px;
+	border-radius: 7px;
+}
+
+.cajonlist{
+	float: center;
+	padding-left: 26%;
+	padding-right: 26%;
+	margin: 30px;
+	border-radius: 7px;
+}
+
+.cajonlistmin{
+	float: center;
+	padding-left: 32%;
+	padding-right: 32%;
+	margin: 30px;
+	border-radius: 7px;
+}
+
+.titulo{
+	color: rgb(99, 87, 87);
+	font-weight: 630;
+	font-size: 30px;
+	text-align: center;
+}
+
+.nn{
+	color: rgb(99, 87, 87);
+	font-weight:200;
+	font-size: 30px;
+	text-align: center;
+}
+
+.parrafo {
+	color: rgb(107, 99, 99);
+	font-weight: 500;
+	font-size: 20px;
+	text-align: justify;
+}
+
+.listado{
+	width: 750px;
+	color: rgb(107, 99, 99);	
+	font-weight: 300;
+	font-size: 20px;	
+}
+
+#or{
+	text-align: center;
+}
