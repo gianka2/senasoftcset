@@ -1,0 +1,78 @@
+CREATE TABLE inventario(
+id_inventario varchar(11),
+descripcion varchar(100),
+precio int,
+saldo_inicial int,
+entradas int,
+salidas int,
+stock_min int,
+saldo int,
+estado varchar(15),
+PRIMARY KEY(id_inventario)
+);
+
+CREATE TABLE tienda(
+id_tienda varchar(11),
+id_sucursal varchar(11),
+id_proveedor varchar(11),
+nombre_tienda varchar(100),
+nombre_bd varchar(11),
+FOREIGN KEY(id_sucursal) REFERENCES sucursal(id_sucursal),
+FOREIGN KEY(id_proveedor) REFERENCES  proveedor(id_proveedor),
+PRIMARY KEY(id_tienda,id_sucursal)
+);
+
+CREATE TABLE sucursal(
+id_sucursal varchar(11),
+id_inventario varchar(11),
+nombre_sucursal varchar(100),
+dir_sucursal varchar(50),
+tel_sucursal varchar(10),
+cel_sucursal varchar(10),
+correo_sucursal varchar(30),
+estado_sucursal varchar(15),
+FOREIGN KEY(id_inventario) REFERENCES inventario(id_inventario),
+PRIMARY KEY(id_sucursal)
+);
+
+CREATE TABLE transaccion_inventario(
+num_transaccion varchar(11),
+id_facturacion varchar(11),
+fecha_transaccion date,
+FOREIGN KEY(num_transaccion) REFERENCES movimiento_inventario(mi_numTransaccion),
+FOREIGN KEY(id_facturacion) REFERENCES pre_facturacion(num_transaccion),
+PRIMARY KEY(num_transaccion)
+);
+
+CREATE TABLE movimiento_inventario(
+mi_numTransaccion varchar(11),
+id_sucursal varchar(11),
+mi_idInventario varchar(11),
+cantidad int,
+valorUnitario int,
+subTotal int,
+iva int,
+FOREIGN KEY(mi_numTransaccion) REFERENCES transaccion_inventario(num_transaccion),
+FOREIGN KEY(id_sucursal) REFERENCES sucursal(id_sucursal),
+FOREIGN KEY(mi_idInventario) REFERENCES inventario(id_inventario),
+PRIMARY KEY(mi_numTransaccion,id_sucursal,mi_idInventario)
+);
+
+CREATE TABLE pre_facturacion(
+num_transaccion varchar(11),
+tran_idUsuario varchar(11),
+tran_idDocumento varchar(11),
+total_entradas int,
+total_salidas int,
+cliente varchar(11),
+fecha date,
+estado varchar(15),
+FOREIGN KEY(tran_idUsuario) REFERENCES usuarios(id_usuario),
+FOREIGN KEY(tran_idDocumento) REFERENCES documento(idDocumento),
+PRIMARY KEY(num_transaccion,tran_idUsuario,tran_idDocumento)
+);
+
+CREATE TABLE documento(
+idDocumento varchar(11),
+)
+
